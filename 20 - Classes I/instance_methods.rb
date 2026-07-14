@@ -3,28 +3,22 @@
 #* write that data, which hides away the complexity of the implementation
 #* and reduces the chance of bugs. 
 
+#* Example: Microwave - hiding all the complexities from physics, heat distribution, power consumption, etc.
+
+
 class Guitar
   def initialize
     @type = "Acoustic"
-    @wood = "Adler"
+    @wood = "Alder"
     @strings = 6
   end
 
-  #* We are free to expose any number of our instance variables and methods.
+  # An instance method available only to Guitar class, not a top-level ruby method.
   def information
     "An #{@type} #{@wood} guitar with #{@strings} strings."
   end
-
-
 end
 
-
-#* Instance methods are regular methods that belongs to the instance.
-guitar = Guitar.new  
-p guitar 
-
-
-p guitar.information
-
-
+guitar_1 = Guitar.new
+p guitar_1.information
 

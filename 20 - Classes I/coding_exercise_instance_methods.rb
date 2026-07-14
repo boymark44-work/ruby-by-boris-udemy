@@ -3,8 +3,6 @@
 #    - A slice method that returns the string "Slicing the cake"
 #    - A sell method that return the string "Sold the cake"
 
-
-
 class Cake
   def bake
     "Baking the cake"
@@ -19,7 +17,7 @@ class Cake
   end
 end
 
-cake = Cake.new  
-p cake.bake 
-p cake.slice
-p cake.sell 
+purchase = Cake.new
+p purchase.bake
+p purchase.slice
+p purchase.sell
