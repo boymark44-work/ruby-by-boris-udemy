@@ -57,3 +57,6 @@ end
 guitar = Guitar.new  
 puts guitar.to_s #* => "An Acoustic Alder guitar with 6 strings."
 puts guitar #* => "An Acoustic Alder guitar with 6 strings."
+
+#* In summary, we can override the default to_s method to customize the string representation
+#* of our custom object.

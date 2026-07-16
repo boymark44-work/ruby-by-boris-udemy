@@ -19,7 +19,5 @@ class Computer
   end
 end
 
-computer = Computer.new  
-puts computer #* "The default string representation of our object"
-
-
+computer = Computer.new
+puts computer.to_s
