@@ -1,9 +1,12 @@
-#* The getter methods.
-#* A method reads/gets/retrieves the value of an instance variable.
+#* The Getter method - are methods that reads/gets/retrieves the value of an instance variable.
+#* Instance variables are hidden or encapsulated. They are private by default. Therefore they cannot be easily access.
+
+#* Getter Methods - allows us to access instance variables by exposing them using methods.
+#* Within the body of my instance method, I can access any piece of information
+#* through any instance variable and expose them.  
+#* A friendly tip is to be descriptive with our method names in order to avoid confusion.
 
 class Guitar
-  #* Instance variables are hidden or encapsulated. They are private by default
-  #* Therefore they cannot be easily access.
   def initialize
     @type = "Acoustic"
     @wood = "Alder"
@@ -13,11 +16,9 @@ class Guitar
   def to_s
     "An #{@type} #{@wood} guitar with #{@strings} strings."
   end
-
-  #* Getter Methods: 
-  #* Within the body of my instance method, I can access any piece of information
-  #* through any instance variable and expose them.  
-  #* Be descriptive with our method names to avoid confusion.
+  
+  #* The method name is type because it exposes the instance variable @type.
+  #* The same thing goes with the wood and strings method. 
   def type
     @type 
   end
@@ -29,10 +30,10 @@ class Guitar
   def strings
     @strings
   end
-
 end
 
+#* Expose the value of the instance variables by calling those methods.
 guitar = Guitar.new 
-p guitar.type #* Expose it via method
-p guitar.wood #* Expose it via method
-p guitar.strings #* Expose it via method
+p guitar.type 
+p guitar.wood 
+p guitar.strings
